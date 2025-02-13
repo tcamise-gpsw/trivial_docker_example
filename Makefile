@@ -5,3 +5,7 @@ help: ## Display this help which is generated from Make goal comments
 .PHONY: setup
 setup: ## Build the docker image
 	@docker compose build
+
+.PHONY: clean-shared-volume
+clean-shared-volume: ## Clean the shared volume
+	@cd ./shared_volume && git clean -dfx .

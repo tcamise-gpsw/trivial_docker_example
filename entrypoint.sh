@@ -35,8 +35,6 @@ Note that the command and its arguments should be passed as one string, i.e:
 EOF
 }
 
-echo "DEBUG initial $@"
-
 while getopts "h?:" opt; do
     case "$opt" in
     h | \?)
