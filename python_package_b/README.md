@@ -1,3 +1,5 @@
 # Python Package B
 
-A Python Package that prints the current www.example.com HTML.
+A Python Package that operates on a JSON file of people.
+
+TODO define / show JSON schema and examples.
