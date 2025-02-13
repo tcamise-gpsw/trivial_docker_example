@@ -25,9 +25,9 @@ Usage: trivial-docker-example [-h] [${valid_tasks[@]}] [\$ARGS]
 Accepts one mandatory positional argument to choose the task to run
 
 Positional task argument (case sensitive):
-    command    ${valid_tasks[@]}
+    task    ${valid_tasks[@]}
 
-Additional arguments are dependent on the command. Run the command with a [--help] argument for more info.
+Additional arguments are dependent on the task. Run the task with a [--help] argument for more info.
 
 EOF
 }
