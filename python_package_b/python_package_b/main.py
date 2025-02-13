@@ -1,20 +1,12 @@
 from pathlib import Path
 import argparse
 import json
-from pydantic import BaseModel
 
-
-class Person(BaseModel):
-    first_name: str
-    last_name: str
-
-
-class People(BaseModel):
-    people: list[Person]
+from python_package_b.entities.people import People
 
 
 def main(args: argparse.Namespace):
-    print(f"operating on ${args.json_file}")
+    print(f"operating on {args.json_file}")
     for person in People(**json.loads(args.json_file.read_text())).people:
         print(f"{person.last_name}, {person.first_name}")
 
