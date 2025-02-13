@@ -56,7 +56,7 @@ rather than the current directory. That is, you should use `/shared_volume/SUB1/
 In the following example we temporarily copy the `people.json` vector from Python Package B in this way.
 
 ```
-cp ./python_package_b/tests/vectors/people.json ./shared_volume
+$ cp ./python_package_b/tests/vectors/people.json ./shared_volume
 
 $ ./dockerize reverse-names /shared_volume/people.json
 performing [reverse-names] with arguments [/shared_volume/people.json]
@@ -75,3 +75,4 @@ This was designed to be easily scalable for more Python Packages or any other ty
 2. Update the `valid_tasks` argument in `entrypoint.sh` to include the new task.
     1. Ideally this new task would take a `--help` argument to be consistent with the top level Docker container help
     2. TODO To maintain OCP, we could read these `valid_tasks` from a `yml` file instead of directly editing code
+    3. Alternatively we don't even need a valid list of tasks and will just throw a user to the error since the task won't be found.
