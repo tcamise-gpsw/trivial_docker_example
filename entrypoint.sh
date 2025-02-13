@@ -27,10 +27,7 @@ Accepts one mandatory positional argument to choose the task to run
 Positional task argument (case sensitive):
     command    ${valid_tasks[@]}
 
-Additional arguments dependent on the command. Run the command with a [--help] argument for more info.
-Note that the command and its arguments should be passed as one string, i.e:
-
-"command --help"
+Additional arguments are dependent on the command. Run the command with a [--help] argument for more info.
 
 EOF
 }
