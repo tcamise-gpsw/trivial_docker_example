@@ -2,6 +2,7 @@
 
 set -e
 
-echo $@
+# echo "dockerizing ["$@"]"
 
-docker compose run --rm trivial-docker-example $@
+# https://stackoverflow.com/questions/58677021/prevent-git-bash-automatically-change-the-path
+MSYS_NO_PATHCONV=1 docker compose run --rm trivial-docker-example "$@"

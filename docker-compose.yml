@@ -3,5 +3,8 @@ services:
         build:
             context: .
         container_name: trivial-docker-example
+        volumes:
+            - ./shared_volume:/shared_volume
         # Command shall be explicitly passed. Default to help if not passed.
-        command: "-h"
+        command: '-h'
+        # entrypoint: "bash" # For debugging

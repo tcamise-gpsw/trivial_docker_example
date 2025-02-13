@@ -14,6 +14,7 @@ class People(BaseModel):
 
 
 def main(args: argparse.Namespace):
+    print(f"operating on ${args.json_file}")
     for person in People(**json.loads(args.json_file.read_text())).people:
         print(f"{person.last_name}, {person.first_name}")
 

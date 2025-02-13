@@ -4,7 +4,7 @@ set -e
 
 valid_tasks=("tell-the-cow" "reverse-names")
 
-array_contains () {
+array_contains() {
     local array="$1[@]"
     local seeking=$2
     local in=1
@@ -16,7 +16,6 @@ array_contains () {
     done
     return $in
 }
-
 
 help() {
     cat <<EOF
@@ -36,16 +35,18 @@ Note that the command and its arguments should be passed as one string, i.e:
 EOF
 }
 
+echo "DEBUG initial $@"
+
 while getopts "h?:" opt; do
     case "$opt" in
-    h|\?)
+    h | \?)
         help
         exit 0
         ;;
     esac
 done
 
-shift $((OPTIND-1))
+shift $((OPTIND - 1))
 
 # This syntax is absurd: https://refine.dev/blog/bash-script-arguments/#implementing-flags-and-options
 [ "${1:-}" = "--" ] && shift
