@@ -1,0 +1,7 @@
+services:
+    trivial-docker-example:
+        build:
+            context: .
+        container_name: trivial-docker-example
+        # Command shall be explicitly passed. Default to help if not passed.
+        command: "-h"

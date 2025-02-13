@@ -1,0 +1,7 @@
+# Start by ignoring everything
+**
+
+# Unignore what we want.
+!/python_package_a/*
+!/python_package_b/*
+!/entrypoint.sh
