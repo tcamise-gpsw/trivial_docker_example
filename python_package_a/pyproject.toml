@@ -5,8 +5,12 @@ description = ""
 authors = ["Tim Camise <tcamise@gopro.com>"]
 readme = "README.md"
 
+[tool.poetry.scripts]
+tell-the-cow = "python_package_a.main:entrypoint"
+
 [tool.poetry.dependencies]
 python = "^3.11"
+cowsay = "^6.1"
 
 
 [build-system]

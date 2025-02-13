@@ -5,8 +5,12 @@ description = ""
 authors = ["Tim Camise <tcamise@gopro.com>"]
 readme = "README.md"
 
+[tool.poetry.scripts]
+reverse-names = "python_package_b.main:entrypoint"
+
 [tool.poetry.dependencies]
 python = "^3.11"
+pydantic = "^2.10.6"
 
 
 [build-system]
