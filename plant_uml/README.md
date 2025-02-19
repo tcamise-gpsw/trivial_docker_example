@@ -14,3 +14,7 @@ Use the helper script as such:
 where $UML is the UML definition to convert, for example: `dockerized_plant_uml.sh test.puml`
 
 The output will be placed in the `shared_volume` directory.
+
+## TODO
+
+We probably don't need to build from full Ubuntu and could use a smaller Java-based image.
