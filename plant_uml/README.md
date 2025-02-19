@@ -13,7 +13,7 @@ Use the helper script as such:
 
 where $UML is the UML definition to convert, for example: `dockerized_plant_uml.sh test.puml`
 
-The output will be placed in the `shared_volume` directory.
+The output will be available in `test.png` at the level of this directory.
 
 ## TODO
 
