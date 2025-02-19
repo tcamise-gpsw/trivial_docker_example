@@ -1,0 +1,11 @@
+services:
+    plant-uml-cli:
+        build:
+            context: .
+        container_name: plant-uml-cli
+        volumes:
+            - ./shared_volume:/shared_volume
+        # Command shall be explicitly passed. Default to help if not passed.
+        working_dir: /shared_volume
+        entrypoint: ["java", "-Djava.awt.headless=true", "-jar", "/plant_uml.jar"]
+        # entrypoint: 'bash' # For debugging

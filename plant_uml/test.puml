@@ -1,0 +1,8 @@
+@startuml test
+
+actor user
+participant client
+
+user -> client: Do the thing
+
+@enduml
