@@ -7,4 +7,4 @@ RUN apt-get update && \
 
 COPY . /
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT ["java", "-Djava.awt.headless=true", "-jar", "/plant_uml.jar"]
