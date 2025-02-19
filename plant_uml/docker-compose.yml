@@ -5,6 +5,5 @@ services:
         container_name: plant-uml-cli
         volumes:
             - ./shared_volume:/shared_volume
-        # Command shall be explicitly passed. Default to help if not passed.
         working_dir: /shared_volume
         # entrypoint: 'bash' # For debugging
